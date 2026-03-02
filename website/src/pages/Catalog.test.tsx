@@ -122,6 +122,26 @@ describe('Catalog Page', () => {
     });
   });
 
+  it('filters by Day AND Category combined', async () => {
+    render(
+      <MemoryRouter>
+        <Catalog />
+      </MemoryRouter>
+    );
+    const daySelect = screen.getByLabelText('Day');
+    const categorySelect = screen.getByLabelText('Category');
+
+    fireEvent.change(daySelect, { target: { value: 'Day 1' } });
+    fireEvent.change(categorySelect, { target: { value: 'Breakout' } });
+
+    expect(screen.getByText('AI in 2026')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText('React Keynote')).not.toBeInTheDocument();
+      expect(screen.queryByText('Vue Workshop')).not.toBeInTheDocument();
+    });
+    expect(screen.getByText('Showing 1 sessions')).toBeInTheDocument();
+  });
+
   it('filters by Level', async () => {
     render(
         <MemoryRouter>

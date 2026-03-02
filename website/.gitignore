@@ -25,3 +25,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# GitHub App credentials
+gha-creds-*.json
+
+# gemini-cli settings
+.gemini/

@@ -51,6 +51,7 @@ export const Catalog = () => {
         session.title.toLowerCase().includes(query) ||
         session.speaker.toLowerCase().includes(query) ||
         session.description.toLowerCase().includes(query) ||
+        session.location.toLowerCase().includes(query) ||
         (session.details?.fullDescription.toLowerCase().includes(query) ?? false);
       
       const matchesDay = selectedDay === 'All' || session.day === selectedDay;

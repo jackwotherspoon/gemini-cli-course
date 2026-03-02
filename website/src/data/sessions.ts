@@ -73,7 +73,7 @@ export const SESSIONS: Session[] = [
     id: 'd1-breakout-2',
     title: 'Real-Time Event Streaming with Kafka',
     speaker: 'Sarah Johnson',
-    category: 'Breakout',
+    category: 'Customer Story',
     day: 'Day 1',
     time: '11:00 AM - 12:00 PM',
     location: 'Room 201',
@@ -203,6 +203,23 @@ export const SESSIONS: Session[] = [
       tracks: ['Web', 'Backend'],
       level: 'Advanced',
       speakerBio: 'Lisa Wang is a compiler engineer and Wasm contributor.'
+    }
+  },
+  {
+    id: 'd1-expo-1',
+    title: 'Tech Innovation Expo',
+    speaker: 'Multiple Exhibitors',
+    category: 'Expo',
+    day: 'Day 1',
+    time: '10:00 AM - 04:00 PM',
+    location: 'Expo Hall',
+    description: 'Explore the latest technologies and solutions from our partners and sponsors.',
+    details: {
+      fullDescription: 'Join us in the Expo Hall to meet our partners and sponsors. See live demos, participate in mini-workshops, and network with industry leaders.',
+      takeaways: ['Partner Solutions', 'Product Demos', 'Networking'],
+      tracks: ['Networking', 'Product'],
+      level: 'Beginner',
+      speakerBio: 'The Expo features representatives from top technology companies worldwide.'
     }
   },
 
@@ -564,6 +581,23 @@ export const SESSIONS: Session[] = [
       tracks: ['Product', 'Mobile'],
       level: 'Beginner',
       speakerBio: 'Mateo Fernandez is a Digital Transformation Lead.'
+    }
+  },
+  {
+    id: 'd3-closing-1',
+    title: 'Closing Remarks',
+    speaker: 'Dr. Elena Rostova',
+    category: 'Keynote',
+    day: 'Day 3',
+    time: '05:00 PM - 05:30 PM',
+    location: 'Main Hall A',
+    description: 'A brief wrap-up of the conference and a look ahead to 2027.',
+    details: {
+      fullDescription: 'Join our CEO for a brief wrap-up of the conference highlights and a first look at our vision for TechStack 2027.',
+      takeaways: ['Conference Highlights', '2027 Roadmap'],
+      tracks: ['Leadership'],
+      level: 'Beginner',
+      speakerBio: 'Dr. Elena Rostova is the CEO of TechStack.'
     }
   }
 ];

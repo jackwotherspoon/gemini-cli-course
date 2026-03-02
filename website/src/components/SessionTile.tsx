@@ -7,6 +7,23 @@ interface SessionTileProps {
   session: Session;
 }
 
+const getCategoryStyles = (category: string) => {
+  switch (category) {
+    case 'Keynote':
+      return 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-900/30 dark:text-purple-300 dark:border-purple-800';
+    case 'Breakout':
+      return 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800';
+    case 'Learning Lab':
+      return 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800';
+    case 'Customer Story':
+      return 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-800';
+    case 'Expo':
+      return 'bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-900/30 dark:text-rose-300 dark:border-rose-800';
+    default:
+      return 'bg-slate-50 text-slate-700 border-slate-200 dark:bg-slate-900/30 dark:text-slate-300 dark:border-slate-800';
+  }
+};
+
 export const SessionTile = ({ session }: SessionTileProps) => {
   return (
     <motion.div
@@ -18,9 +35,7 @@ export const SessionTile = ({ session }: SessionTileProps) => {
       className="group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-md transition-all flex flex-col h-full"
     >
       <div className="flex flex-wrap gap-2 items-start mb-4">
-          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getCategoryStyles(session.category)} shadow-sm border border-transparent`}>
-            'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300'
-          } shadow-sm border border-transparent`}>
+        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getCategoryStyles(session.category)} border`}>
           {session.category}
         </span>
         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
